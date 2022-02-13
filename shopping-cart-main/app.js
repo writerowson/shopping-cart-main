@@ -7,9 +7,8 @@ function updateNumber(isIncreasing) {
     else if (caseNumber > 0) {
         caseNumber = parseInt(caseNumber) - 1;
     }
+    caseInput.value = caseNumber;
 }
-caseInput.value = caseNumber;
-console.log(caseInput.value)
 
 
 // update case total
