@@ -1,5 +1,5 @@
 function updateProductNumber(product, price, isIncreasing) {
-    const productInput = document.getElementById(product + '-number')
+    const productInput = document.getElementById(product + '-number');
     let productNumber = productInput.value;
     if (isIncreasing == true) {
         productNumber = parseInt(productNumber) + 1;
@@ -12,7 +12,7 @@ function updateProductNumber(product, price, isIncreasing) {
     const productTotal = document.getElementById(product + '-total');
     productTotal.innerText = productNumber * price
     // calculate total
-    calculateTotal()
+    calculateTotal();
 }
 // total sub
 function getInputValue(product) {
@@ -23,14 +23,14 @@ function getInputValue(product) {
 
 function calculateTotal() {
     const phoneTotal = getInputValue('phone') * 1219;
-    const caseTotal = getInputValue('case') * 59
+    const caseTotal = getInputValue('case') * 59;
     const subTotal = phoneTotal + caseTotal;
-    const taxTotal = subTotal / 10
-    const totalPrice = subTotal + tax
+    const taxTotal = subTotal / 10;
+    const totalPrice = subTotal + taxTotal;
     // update on the html
-    document.getElementById('sub-total').innerText = subTotal
-    document.getElementById('tax-total').innerText = taxTotal
-    document.getElementById('total').innerText = totalPrice
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-total').innerText = taxTotal;
+    document.getElementById('total').innerText = totalPrice;
 }
 
 // handle phone plus minus events
